@@ -1,0 +1,15 @@
+# Requirements for pines-category-classifier-ft
+# Note: On Windows, installing torch may require a specific wheel (CPU/CUDA). See https://pytorch.org for the recommended command.
+transformers>=4.30.0
+datasets>=2.10.0
+pandas>=1.5.3
+scikit-learn>=1.2.2
+# torch: uncomment a suitable line below based on your system (CPU/CUDA)
+# CPU-only (pip automatically resolves appropriate wheel in many cases):
+# torch>=2.0.1
+# OR install via the recommended command from https://pytorch.org (example for CPU):
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Optional helpers
+accelerate>=0.21.0
+huggingface-hub>=0.16.4
