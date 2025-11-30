@@ -68,7 +68,7 @@ from transformers import (
 )
 # A Symphony of Rage
 # 1. Cargar CSV
-df = pd.read_csv("ms_pines_funcion200ejemplos.csv", encoding="utf-8")[["v1", "v2"]]
+df = pd.read_csv("datasets\ms_pines_funcion_2000ejemplos.csv", encoding="utf-8")[["v1", "v2"]]
 df = df.rename(columns={"v1": "label", "v2": "text"})
 df["label"] = df["label"].map({"decorativo": 0, "coleccionable": 1, "promocional": 2, "funcional": 3})  # Mapear etiquetas a 0 y 1
 
@@ -115,7 +115,7 @@ training_args = TrainingArguments(
     learning_rate=2e-5,
     per_device_train_batch_size=2,  #Este parámetro puede generar problemas de memoria insuficiente
     per_device_eval_batch_size=2,
-    num_train_epochs=2,
+    num_train_epochs=5,
     weight_decay=0.01,
     logging_dir="./logs",
     logging_steps=50,
